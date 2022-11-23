@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Beauté du Nord</h1>
+        <nav>
+            <ul>
+                <a href="#hom">Home </a>
+                <a href="#far">Formulaire à remplir</a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+                <fieldset>
+                    <!-- <legend>Formulaire à remplir</legend> -->
+                    <h2 id="far" >Formulaire à remplir</h2>
+                    <form id="form1">
+                        <!-- <label for="Nom">Nom</label> --> 
+                        <input type="text" id="nom" placeholder=" Nom">
+                        <select id="select1">
+                            <option value="Select une marque" >Select une marque</option>
+                            <option value="Dior">Dior</option>
+                            <option value="Gucci">Gucci</option>
+                            <option value="Oriflame">Oriflame</option>
+                            <option value="Channel">Channel</option>
+                        </select>
+                        <input type="number" id="prix" placeholder=" prix">
+                        <input type="date" id="Date" placeholder="Sa date de production">
+                        <select id="select2">
+                            <option value="">type</option>
+                            <option value="Hygiène et toilette">Hygiène et toilette</option>
+                            <option value="Soins esthétiques">Soins esthétiques</option>
+                            <option value="Produits solaires">Produits solaires</option>
+                            <option value="Beauté des mains et des pieds">Beauté des mains et des pieds</option>
+                            <option value="Produits de maquillage">Produits de maquillage</option>
+                            <option value="Entretien capillaires">Entretien capillaires</option>
+                            <option value="Parfums">Parfums</option>
+                        </select>
+                    </form>
+                    <p id="text2">Est en promotion:</p>
+                    <form action="" id="form2">
+                        <label for="oui"><input type="radio" name="a" value="oui" id="Oui">Oui</label> <!--label for text next to input -->
+                        <label for="non"><input type="radio" name="a" value="non" id="Non">Non</label>
+                        <div id="button">
+                            <input type="button" onclick="AddProduct()" id="btnAjouter" value="AJouter">
+                            <input type="button" onclick="ModProduct()"  id="btnModifier" value="Modifier">
+                        </div>
+                    </form>
+                    <div class="titre"><p>GESTION DE STOCK</p></div>
+                    <table id="table">
+                        <th>le Nom</th>
+                        <th>la Marque</th>
+                        <th>le prix</th>
+                        <th>la date de production</th>
+                        <th>le type</th>
+                        <th>est-il en promotion (oui,non)</th>
+                    </table>
+                </fieldset>
+                <img src="img/53880710_l.jpg" alt="53880710_l.jpg">
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

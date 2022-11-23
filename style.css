@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@300&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Sono', sans-serif;
+    font-size: 1.1rem;
+    scroll-behavior: smooth;
+}
+body {
+    background: rgb(197,196,90);
+    background: linear-gradient(180deg, rgba(197,196,90,1) 0%, rgba(119,118,59,1) 100%);
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    background-color: #cecdc8;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2em;
+}
+h2 {
+    font-size: 1.5em;
+    padding: 2% 2% 2% 0;
+}
+ul {
+    display: flex;
+    justify-content: space-around;
+}
+a {
+    text-decoration: none;
+    font-weight: bold ;
+    color: black;
+}
+ul a:hover {
+    background-color: #c5c45a;
+    border-radius: 5px;
+    height: 5%;
+}
+nav {
+    width: 20%;
+}
+fieldset {
+    /* box-shadow: 5px 5px 100px 5px grey; */
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    width: 50%;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+img {
+    width: 30%;
+}
+section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5% 0;
+}
+input , select {
+    padding: 1%;
+    margin: 1% 0;
+    border: solid 3px #d1d1d1;
+}
