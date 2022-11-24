@@ -6,6 +6,7 @@
     font-size: 1.1rem;
     scroll-behavior: smooth;
 }
+
 body {
     background: rgb(197,196,90);
     background: linear-gradient(180deg, rgba(197,196,90,1) 0%, rgba(119,118,59,1) 100%);
@@ -67,4 +68,7 @@ input , select {
     padding: 1%;
     margin: 1% 0;
     border: solid 3px #d1d1d1;
+}
+#btnModifier {
+    display: none;
 }

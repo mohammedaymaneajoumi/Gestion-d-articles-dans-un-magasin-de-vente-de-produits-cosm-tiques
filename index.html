@@ -24,14 +24,16 @@
                     <h2 id="far" >Formulaire à remplir</h2>
                     <form id="form1">
                         <!-- <label for="Nom">Nom</label> --> 
-                        <input type="text" id="nom" placeholder=" Nom">
+                        <input type="text" id="Nom" placeholder=" Nom">
+                        <P id="NomAffich"></P>
                         <select id="select1">
-                            <option value="Select une marque" >Select une marque</option>
+                            <option value="" >Select une marque</option>
                             <option value="Dior">Dior</option>
                             <option value="Gucci">Gucci</option>
                             <option value="Oriflame">Oriflame</option>
                             <option value="Channel">Channel</option>
                         </select>
+                        <p id="MarqueSel"></p>
                         <input type="number" id="prix" placeholder=" prix">
                         <input type="date" id="Date" placeholder="Sa date de production">
                         <select id="select2">
@@ -55,13 +57,16 @@
                         </div>
                     </form>
                     <div class="titre"><p>GESTION DE STOCK</p></div>
-                    <table id="table">
-                        <th>le Nom</th>
-                        <th>la Marque</th>
-                        <th>le prix</th>
-                        <th>la date de production</th>
-                        <th>le type</th>
-                        <th>est-il en promotion (oui,non)</th>
+                    <table id="Table" border="1">
+                        <tr>
+                            <th>le Nom</th>
+                            <th>la Marque</th>
+                            <th>le prix</th>
+                            <th>la date de production</th>
+                            <th>le type</th>
+                            <th>est-il en promotion (oui,non)</th>
+                            <th>action</th>
+                        </tr>
                     </table>
                 </fieldset>
                 <img src="img/53880710_l.jpg" alt="53880710_l.jpg">
