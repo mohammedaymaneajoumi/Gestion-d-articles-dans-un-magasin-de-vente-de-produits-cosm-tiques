@@ -7,6 +7,8 @@ function AddProduct() {
     let type = document.getElementById('select2').value;
     let ProOui  = document.getElementById('Oui').value;
     let proNom = document.getElementById('Non').value;
+    let ResRadio = document.createTextNode(ProOui);
+    let ResRadio2 = document.createTextNode(proNom);
     let chekbox = document.getElementById('Oui').checked;  // to know when you select
     let chekboxx = document.getElementById('Non').checked; // to know when you select
     let table = document.getElementById('Table');          // declare table
@@ -54,14 +56,12 @@ function AddProduct() {
     MyNewElement.appendChild(MyNewChild5);
 
     if(chekbox==true){                                      // put td inside th RADIO BUTTON
-        let resRadio = document.createTextNode(ProOui);     //declare 
-        MyNewChild6.appendChild(resRadio);                  //put declare to td
+        MyNewChild6.appendChild(ResRadio);                  //put declare to td
         MyNewElement.appendChild(MyNewChild6);              //td inside tr
     }
-    if(chekboxx==true){
-        let resRadio = document.createTextNode(proNom );
-        MyNewChild6.appendChild(resRadio);
-        MyNewElement.appendChild(MyNewChild6)
+    else if(chekboxx==true){
+        MyNewChild6.appendChild(ResRadio2);
+        MyNewElement.appendChild(MyNewChild6);
     }
     
     MyNewChild8.appendChild(ButtonNameM);                   //////////////////CONTENU DU BUTTON
@@ -72,10 +72,14 @@ function AddProduct() {
 
 
     table.appendChild(MyNewElement);                        //////////////tr OR FUL LIGNE inside table 
-    let inputs = document.querySelectorAll('input');
-    let inputsSel = document.querySelectorAll('select');
-    inputs.forEach(input => input.value = '')
-    inputsSel.forEach(select => select.value = '')
+    document.getElementById('Oui').checked= "";  
+    document.getElementById('Non').checked = "";
+    document.getElementById('Nom').value = "";
+    document.getElementById('select1').value = "";
+    document.getElementById('prix').value = "";
+    document.getElementById('Date').value = "";
+    document.getElementById('select2').value = "";
+    
 }
 
 function SUPRIMER(i){

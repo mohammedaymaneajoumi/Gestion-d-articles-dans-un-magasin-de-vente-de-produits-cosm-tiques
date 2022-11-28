@@ -72,3 +72,29 @@ input , select {
 #btnModifier {
     display: none;
 }
+@media only screen and (max-width:1330px) {
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+    a {
+        display: none;
+    }
+    td {
+        display: flex ;
+        flex-direction: column;
+        
+    }
+    th {
+        font-size: smaller;
+    }
+    img {
+        display: none;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    h2 {
+        font-size: 1em;
+    }
+}
