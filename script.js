@@ -1,3 +1,4 @@
+var i = 0;
 function AddProduct() {
     let nom = document.getElementById('Nom').value;
     let option = document.getElementById('select1').value;
@@ -9,7 +10,7 @@ function AddProduct() {
     let chekbox = document.getElementById('Oui').checked;  // to know when you select
     let chekboxx = document.getElementById('Non').checked; // to know when you select
     let table = document.getElementById('Table');          // declare table
-
+    i++;
 
     let MyNewElement = document.createElement('tr');        // creat what appear when press button 
     let MyNewChild1 = document.createElement('td');         // creat what appear when press button 
@@ -18,12 +19,13 @@ function AddProduct() {
     let MyNewChild4 = document.createElement('td');         // creat what appear when press button 
     let MyNewChild5 = document.createElement('td');         // creat what appear when press button 
     let MyNewChild6 = document.createElement('td');         // creat what appear when press button 
-    let MyNewChild7 = document.createElement('td');         // creat what appear when press button 
+    let MyNewChild7 = document.createElement('td'); 
+    MyNewElement.id="tr"+i;        
 
     let MyNewChild8 = document.createElement('button');     // creat BUTTONS SUP AND MODIF when press button 
     let MyNewChild9 = document.createElement('button');
     MyNewChild8.setAttribute("onclick","MODIFIER()");       //ONCLICK TO BUTTONS
-    MyNewChild9.setAttribute("onclick","SUPRIMER()");
+    MyNewChild9.setAttribute("onclick",'SUPRIMER('+i+')');
 
 
 
@@ -70,5 +72,52 @@ function AddProduct() {
 
 
     table.appendChild(MyNewElement);                        //////////////tr OR FUL LIGNE inside table 
+    let inputs = document.querySelectorAll('input');
+    let inputsSel = document.querySelectorAll('select');
+    inputs.forEach(input => input.value = '')
+    inputsSel.forEach(select => select.value = '')
+}
 
+function SUPRIMER(i){
+    document.getElementById('tr'+i).remove();
+    
+}
+
+let table = document.getElementById('Table'),rIndex; 
+function MODIFIER(){
+    document.getElementById('btnAjouter').style.display="none";
+    document.getElementById('btnModifier').style.display="block";
+
+    for (let i = 0 ; i<=table.rows.length ; i++){
+        table.rows[i].onclick = function(){
+            rIndex = this.rowIndex;
+            document.getElementById('Nom').value = this.cells[0].innerHTML;
+            document.getElementById('select1').value = this.cells[1].innerHTML;
+            document.getElementById('prix').value = this.cells[2].innerHTML;
+            document.getElementById('Date').value = this.cells[3].innerHTML;
+            document.getElementById('select2').value = this.cells[4].innerHTML;
+            document.getElementById('Oui').checked = this.cells[5].innerHTML;
+            document.getElementById('Non').checked = this.cells[5].innerHTML;
+        };
+
+    }
+
+}
+function ModProduct(){
+    document.getElementById('btnAjouter').style.display="block"
+    document.getElementById('btnModifier').style.display="none"
+    let chekbox = document.getElementById('Oui').checked; 
+    let chekboxx = document.getElementById('Non').checked;
+    table.rows[rIndex].cells[0].innerHTML = document.getElementById('Nom').value;
+    table.rows[rIndex].cells[1].innerHTML = document.getElementById('select1').value;
+    table.rows[rIndex].cells[2].innerHTML = document.getElementById('prix').value;
+    table.rows[rIndex].cells[3].innerHTML = document.getElementById('Date').value;
+    table.rows[rIndex].cells[4].innerHTML =document.getElementById('select2').value;
+    if(chekbox==true){                                 
+        table.rows[rIndex].cells[5].innerHTML = document.getElementById('Oui').value;
+    }
+    if(chekboxx==true){
+        table.rows[rIndex].cells[5].innerHTML = document.getElementById('Non').value;
+    }
+    
 }

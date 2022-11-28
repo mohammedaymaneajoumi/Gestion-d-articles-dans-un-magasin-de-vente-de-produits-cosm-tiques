@@ -36,7 +36,7 @@ a {
     color: black;
 }
 ul a:hover {
-    background-color: #c5c45a;
+    color: #c5c45a;
     border-radius: 5px;
     height: 5%;
 }
